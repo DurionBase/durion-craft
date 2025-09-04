@@ -10,10 +10,38 @@ export const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary via-accent to-primary rounded-lg flex items-center justify-center relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 animate-pulse"></div>
-              <span className="text-primary-foreground font-bold text-sm relative z-10">DB</span>
+          <div className="flex items-center space-x-3">
+            <div className="w-10 h-10 relative">
+              {/* 3D Cube Network Structure */}
+              <svg viewBox="0 0 40 40" className="w-full h-full">
+                {/* Cube edges */}
+                <g stroke="hsl(var(--primary))" strokeWidth="1.5" fill="none">
+                  {/* Front face */}
+                  <path d="M12 12 L28 12 L28 28 L12 28 Z" className="opacity-80" />
+                  {/* Back face */}
+                  <path d="M8 8 L24 8 L24 24 L8 24 Z" className="opacity-60" />
+                  {/* Connecting edges */}
+                  <path d="M12 12 L8 8" className="opacity-70" />
+                  <path d="M28 12 L24 8" className="opacity-70" />
+                  <path d="M28 28 L24 24" className="opacity-70" />
+                  <path d="M12 28 L8 24" className="opacity-70" />
+                  {/* Internal connections */}
+                  <path d="M20 12 L16 8" className="opacity-50" />
+                  <path d="M20 28 L16 24" className="opacity-50" />
+                </g>
+                {/* Network nodes */}
+                <g fill="hsl(var(--primary))">
+                  <circle cx="12" cy="12" r="1.5" className="animate-pulse" />
+                  <circle cx="28" cy="12" r="1.5" className="animate-pulse" style={{ animationDelay: '0.2s' }} />
+                  <circle cx="28" cy="28" r="1.5" className="animate-pulse" style={{ animationDelay: '0.4s' }} />
+                  <circle cx="12" cy="28" r="1.5" className="animate-pulse" style={{ animationDelay: '0.6s' }} />
+                  <circle cx="8" cy="8" r="1.5" className="animate-pulse" style={{ animationDelay: '0.1s' }} />
+                  <circle cx="24" cy="8" r="1.5" className="animate-pulse" style={{ animationDelay: '0.3s' }} />
+                  <circle cx="24" cy="24" r="1.5" className="animate-pulse" style={{ animationDelay: '0.5s' }} />
+                  <circle cx="8" cy="24" r="1.5" className="animate-pulse" style={{ animationDelay: '0.7s' }} />
+                  <circle cx="20" cy="20" r="1" className="animate-pulse" style={{ animationDelay: '0.4s' }} />
+                </g>
+              </svg>
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Durion Base
