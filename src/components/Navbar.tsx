@@ -11,28 +11,29 @@ export const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <Shield className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold tracking-tight">Durion Base</span>
-            <span className="text-sm text-muted-foreground font-mono">FZCO</span>
+            <div className="w-8 h-8 bg-gradient-to-br from-primary via-accent to-primary rounded-lg flex items-center justify-center relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 animate-pulse"></div>
+              <span className="text-primary-foreground font-bold text-sm relative z-10">DB</span>
+            </div>
+            <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Durion Base
+            </span>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-foreground hover:text-primary transition-smooth">
+            <a href="/" className="text-foreground hover:text-primary transition-smooth">
               Home
             </a>
-            <a href="#services" className="text-foreground hover:text-primary transition-smooth">
-              Services
-            </a>
-            <a href="#about" className="text-foreground hover:text-primary transition-smooth">
+            <a href="/about" className="text-foreground hover:text-primary transition-smooth">
               About
             </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-smooth">
+            <a href="/#services" className="text-foreground hover:text-primary transition-smooth">
+              Services
+            </a>
+            <a href="/#contact" className="text-foreground hover:text-primary transition-smooth">
               Contact
             </a>
-            <Button variant="hero" size="sm">
-              Get Started
-            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -52,38 +53,33 @@ export const Navbar = () => {
           <div className="md:hidden border-t border-border bg-card/50 backdrop-blur-lg">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <a
-                href="#home"
+                href="/"
                 className="block px-3 py-2 text-foreground hover:text-primary transition-smooth"
                 onClick={() => setIsOpen(false)}
               >
                 Home
               </a>
               <a
-                href="#services"
-                className="block px-3 py-2 text-foreground hover:text-primary transition-smooth"
-                onClick={() => setIsOpen(false)}
-              >
-                Services
-              </a>
-              <a
-                href="#about"
+                href="/about"
                 className="block px-3 py-2 text-foreground hover:text-primary transition-smooth"
                 onClick={() => setIsOpen(false)}
               >
                 About
               </a>
               <a
-                href="#contact"
+                href="/#services"
+                className="block px-3 py-2 text-foreground hover:text-primary transition-smooth"
+                onClick={() => setIsOpen(false)}
+              >
+                Services
+              </a>
+              <a
+                href="/#contact"
                 className="block px-3 py-2 text-foreground hover:text-primary transition-smooth"
                 onClick={() => setIsOpen(false)}
               >
                 Contact
               </a>
-              <div className="px-3 py-2">
-                <Button variant="hero" size="sm" className="w-full">
-                  Get Started
-                </Button>
-              </div>
             </div>
           </div>
         )}

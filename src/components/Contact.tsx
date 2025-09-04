@@ -55,7 +55,10 @@ export const Contact = () => {
                   className="min-h-[120px] bg-background/50"
                 />
               </div>
-              <Button variant="hero" className="w-full">
+              <Button variant="hero" className="w-full" onClick={(e) => {
+                e.preventDefault();
+                window.location.href = 'mailto:Durionbase@proton.me';
+              }}>
                 Send Message
               </Button>
             </CardContent>
@@ -93,20 +96,6 @@ export const Contact = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-card/30 backdrop-blur-sm border-border/50">
-              <CardContent className="p-6">
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 rounded-lg bg-primary/10 border border-primary/20">
-                    <Clock className="h-6 w-6 text-primary" />
-                  </div>
-                  <div className="space-y-1">
-                    <h3 className="font-semibold">Response Time</h3>
-                    <p className="text-muted-foreground">24/7 Monitoring</p>
-                    <p className="text-sm text-muted-foreground">Emergency incidents: 2 hours</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
 
             {/* CTA Card */}
             <Card className="bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20">
@@ -115,7 +104,7 @@ export const Contact = () => {
                 <p className="text-muted-foreground">
                   Schedule a free security consultation with our experts.
                 </p>
-                <Button variant="hero" size="lg" className="w-full">
+                <Button variant="hero" size="lg" className="w-full" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
                   Book Consultation
                 </Button>
               </CardContent>

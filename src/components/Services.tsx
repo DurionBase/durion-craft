@@ -80,10 +80,6 @@ export const Services = () => {
                       </div>
                     ))}
                   </div>
-                  <Button variant="ghost" className="w-full group mt-4">
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
                 </CardContent>
               </Card>
             );
