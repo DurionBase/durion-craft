@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <footer className="bg-secondary/10 border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -21,25 +21,11 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Services */}
-          <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Services</h3>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Software Assurance</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Security Engineering</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Research & Development</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Training & Education</a></li>
-            </ul>
-          </div>
-
           {/* Company */}
           <div className="space-y-4">
             <h3 className="font-semibold text-foreground">Company</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Our Team</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Careers</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">News</a></li>
+              <li><a href="/about" className="text-muted-foreground hover:text-primary transition-colors">About Us</a></li>
             </ul>
           </div>
 
@@ -49,8 +35,8 @@ export const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li className="text-muted-foreground">Durionbase@proton.me</li>
               <li className="text-muted-foreground">Dubai, UAE</li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Terms of Service</a></li>
+              <li><a href="/privacy" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</a></li>
+              <li><a href="/terms" className="text-muted-foreground hover:text-primary transition-colors">Terms of Service</a></li>
             </ul>
           </div>
         </div>
